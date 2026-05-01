@@ -1,8 +1,15 @@
 package com.exam.system.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * 选课记录实体类。
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class EnrollRecord {
 
     /**
@@ -20,36 +27,15 @@ public class EnrollRecord {
      */
     private String courseName;
 
+
     /**
-     * 全参构造器。
+     * 课程类型。
      */
+    private String courseType;
+
     public EnrollRecord(String studentId, String courseId, String courseName) {
         this.studentId = studentId;
         this.courseId = courseId;
-        this.courseName = courseName;
-    }
-
-    public String getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
-    }
-
-    public String getCourseId() {
-        return courseId;
-    }
-
-    public void setCourseId(String courseId) {
-        this.courseId = courseId;
-    }
-
-    public String getCourseName() {
-        return courseName;
-    }
-
-    public void setCourseName(String courseName) {
         this.courseName = courseName;
     }
 
